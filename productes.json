@@ -1,0 +1,76 @@
+{
+    "productes": [
+        {
+            "id": 1,
+            "nombre": "3 Piedras",
+            "precio": 400.00,
+            "imagen": "img/producto1.jpg"
+        },
+        {
+            "id": 2,
+            "nombre": "Piedra grande",
+            "precio": 800.00,
+            "imagen": "img/producto2.jpg"
+        },
+        {
+            "id": 3,
+            "nombre": "Piedra redonda",
+            "precio": 2000.00,
+            "imagen": "img/producto3.jpg"
+        },
+        {
+            "id": 4,
+            "nombre": "Piedra cuadrada",
+            "precio": 70.00,
+            "imagen": "img/producto4.jpg"
+        },
+        {
+            "id": 5,
+            "nombre": "Piedra antigua",
+            "precio": 50.00,
+            "imagen": "img/producto5.jpg"
+        },
+        {
+            "id": 6,
+            "nombre": "Moai",
+            "precio": 3000.00,
+            "imagen": "img/producto6.jpg"
+        },
+        {
+            "id": 7,
+            "nombre": "Piedra monstruo",
+            "precio": 500.00,
+            "imagen": "img/producto7.jpg"
+        },
+        {
+            "id": 8,
+            "nombre": "Piedra grande 2",
+            "precio": 200.00,
+            "imagen": "img/producto8.jpg"
+        },
+        {
+            "id": 9,
+            "nombre": "Piedra blanca",
+            "precio": 150.00,
+            "imagen": "img/producto9.jpg"
+        },
+        {
+            "id": 10,
+            "nombre": "Piedra redonda pequeña",
+            "precio": 80.00,
+            "imagen": "img/producto10.jpg"
+        },
+        {
+            "id": 11,
+            "nombre": "Piedra larga",
+            "precio": 1500.00,
+            "imagen": "img/producto11.jpg"
+        },
+        {
+            "id": 12,
+            "nombre": "Piedra pequeña",
+            "precio": 20.00,
+            "imagen": "img/producto12.jpg"
+        }
+    ]
+}

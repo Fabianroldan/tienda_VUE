@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="project.js" type="module"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Tienda</title>
+    <style>
+        .tienda {
+            display: flex;
+        }
+
+        .productos {
+            flex: 1;
+        }
+
+        #resumen-pedido {
+            width: 50%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="section">
+        <div class="container">
+            <div id="app">
+                <div v-if="mostrar('portada')">
+                    <h1>Tienda</h1>
+                    <button @click="cambiarDiv('tienda')">Ir a la Tienda</button>
+                </div>
+                <div v-if="mostrar('tienda')">
+                    <div class="tienda">
+                        <div class="productos">
+                            <div v-for="(actual, index) in productes" :key="actual.id" class="producto">
+                                <h3>{{ actual.nombre }} - {{ actual.precio }}€</h3>
+                                <img :src="actual.imagen" width="200" height="200"><br>
+                                <button @click="afegir(index)">+</button>
+                                <button @click="treure(index)">-</button>
+                            </div>
+                        </div>
+                        <div id="resumen-pedido">
+                            <h2>Resumen del pedido</h2>
+                            <ul>
+                                <li v-for="actual in pedidoActual">
+                                    {{productes[actual.id].nombre}} - {{actual.cantidad}} -
+                                    {{productes[actual.id].precio * actual.cantidad}}€
+                                </li>
+                                <span><strong>Total:</strong> {{ calcularTotal() }}€</span><br>
+                            </ul>
+
+                            <button @click="cambiarDiv('portada')">Volver a la Portada</button>
+                    <button @click="cambiarDiv('checkout')">Finalizar Compra</button>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div v-if="mostrar('checkout')">
+                    <h1>Checkout</h1>
+                    <h2>Resumen del pedido</h2>
+                            <ul>
+                                <li v-for="actual in pedidoActual">
+                                    {{productes[actual.id].nombre}} - {{actual.cantidad}} -
+                                    {{productes[actual.id].precio * actual.cantidad}}€
+                                </li>
+                                <span><strong>Total:</strong> {{ calcularTotal() }}€</span><br>
+                            </ul>
+                    <button @click="cambiarDiv('portada')">Volver a la Portada</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
